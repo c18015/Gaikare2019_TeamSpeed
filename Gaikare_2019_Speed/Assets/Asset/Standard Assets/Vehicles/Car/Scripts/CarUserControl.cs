@@ -20,13 +20,27 @@ namespace UnityStandardAssets.Vehicles.Car
         private void FixedUpdate()
         {
             // pass the input to the car!
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+            //float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            float v = 1f; // CrossPlatformInputManager.GetAxis("Vertical");
+            float h = Input.acceleration.x;
+            //float v = Input.acceleration.y;
+
+            if (h >= 0.2f)
+            {
+                h = 0.1f;
+            }
+
+            if (h <= -0.2f)
+            {
+                h = -0.1f;
+            }
+
+
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
             m_Car.Move(h, v, v, handbrake);
 #else
-            m_Car.Move(h, v, v, 0f);
+            m_Car.Move(h * 1.5f, v, v, 0f);
 #endif
         }
     }
