@@ -6,6 +6,8 @@ TagManager:
   tags:
   - RotaCurves
   - Baria
+  - L_Wall
+  - R_Wall
   layers:
   - Default
   - TransparentFX
