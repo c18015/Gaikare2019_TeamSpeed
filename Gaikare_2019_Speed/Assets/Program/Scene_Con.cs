@@ -17,9 +17,15 @@ public class Scene_Con : MonoBehaviour {
         
     }
 
-    public void Go_Result_Scene()
+    public void Go_Clear_Scene()
     {
-        Application.LoadLevel("Result_Scene");
+        Application.LoadLevel("Clear");
+
+    }
+
+    public void Go_Failure_Scene()
+    {
+        Application.LoadLevel("Failure");
 
     }
 
