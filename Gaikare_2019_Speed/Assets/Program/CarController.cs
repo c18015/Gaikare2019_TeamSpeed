@@ -18,7 +18,7 @@ public class CarController : MonoBehaviour {
         speed = speed + Time.deltaTime / 60f;
         if (speed >= MaxSpeed)
         {
-            speed = 0.8f;
+            speed = 0.5f;
         }
 
 
@@ -26,7 +26,7 @@ public class CarController : MonoBehaviour {
         //float h = Input.GetAxis("Horizontal");
         float v = 1;
 
-        Debug.Log(speed);
+        //Debug.Log(speed);
         
         
         float h = Input.acceleration.x;
