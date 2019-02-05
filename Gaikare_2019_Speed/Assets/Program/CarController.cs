@@ -5,8 +5,8 @@ using UnityEngine;
 public class CarController : MonoBehaviour {
 
 
-    public float speed = 0.2f;
-    public float MaxSpeed = 0.9f;
+    public float speed = 0.4f;
+    public float MaxSpeed = 1f;
 
     // Use this for initialization
     void Start () {
@@ -15,10 +15,10 @@ public class CarController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        speed = speed + Time.deltaTime / 60f;
+        speed = (speed + Time.deltaTime / 10) ;
         if (speed >= MaxSpeed)
         {
-            speed = 0.5f;
+            speed = 0.6f;
         }
 
 
@@ -49,5 +49,16 @@ public class CarController : MonoBehaviour {
         this.transform.Rotate(0f, h * 3f, 0f);
 
 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.tag == "Baria")
+        {
+
+            Application.LoadLevel("Result_Scene");
+
+        }
     }
 }

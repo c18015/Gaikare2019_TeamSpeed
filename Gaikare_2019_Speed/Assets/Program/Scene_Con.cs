@@ -5,20 +5,30 @@ using UnityEngine;
 public class Scene_Con : MonoBehaviour {
 
 
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void Go_Main_Scene()
     {
         Application.LoadLevel("Debug_Scene");
-        //Application.LoadLevel("Title");
+        //Application.LoadLevel("Main");
+    }
+
+    public void Back_Title_Scene()
+    {
+        Application.LoadLevel("Title");
+        
+    }
+
+    public void Go_Result_Scene()
+    {
+        Application.LoadLevel("Result_Scene");
+
+    }
+
+    public void GameEnd()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBPLAYER
+		Application.Quit();
+#endif
     }
 }
