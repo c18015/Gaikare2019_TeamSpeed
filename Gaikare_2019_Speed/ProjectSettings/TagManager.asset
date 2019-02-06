@@ -8,6 +8,7 @@ TagManager:
   - Baria
   - L_Wall
   - R_Wall
+  - Baria2
   layers:
   - Default
   - TransparentFX

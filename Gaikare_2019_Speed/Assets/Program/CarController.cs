@@ -57,7 +57,14 @@ public class CarController : MonoBehaviour {
         if (collision.gameObject.tag == "Baria")
         {
 
-            Application.LoadLevel("Result_Scene");
+            Application.LoadLevel("Clear");
+
+        }
+
+        if (collision.gameObject.tag == "Baria2")
+        {
+
+            Application.LoadLevel("GameOver");
 
         }
     }

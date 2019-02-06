@@ -36,6 +36,11 @@ public class Enemy_Controller : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag == "Baria2")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void M_Rota()
