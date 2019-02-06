@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Controller : MonoBehaviour {
 
     public float Speed;
-    
+ 
 
 
     // Use this for initialization
@@ -15,9 +15,9 @@ public class Enemy_Controller : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+ 
         transform.Translate(0, 0, 1 * Speed * Time.deltaTime);
-        
+
 
     }
 
@@ -25,10 +25,7 @@ public class Enemy_Controller : MonoBehaviour {
     {
         if (collider.gameObject.tag == "RotaCurves")
         {
-
             M_Rota();
-
-
         }
     }
 
@@ -37,8 +34,6 @@ public class Enemy_Controller : MonoBehaviour {
 
         if (collision.gameObject.tag == "Baria")
         {
-          
-
             Destroy(this.gameObject);
         }
     }
