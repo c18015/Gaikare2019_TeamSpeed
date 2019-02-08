@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Image
-  - Item
-  - Enemy
+
+  - RotaCurves
+  - Baria
+  - L_Wall
+  - R_Wall
+  - Baria2
+
   layers:
   - Default
   - TransparentFX
