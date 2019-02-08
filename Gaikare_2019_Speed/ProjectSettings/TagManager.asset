@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RotaCurves
+  - Baria
+  - L_Wall
+  - R_Wall
+  - Baria2
   layers:
   - Default
   - TransparentFX
