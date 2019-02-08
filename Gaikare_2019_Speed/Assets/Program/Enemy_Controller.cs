@@ -31,6 +31,7 @@ public class Enemy_Controller : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
+        
 
         if (collision.gameObject.tag == "Baria")
         {
