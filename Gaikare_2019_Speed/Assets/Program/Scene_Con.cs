@@ -7,8 +7,8 @@ public class Scene_Con : MonoBehaviour {
 
     public void Go_Main_Scene()
     {
-        Application.LoadLevel("Debug_Scene");
-        //Application.LoadLevel("Main");
+        //Application.LoadLevel("Debug_Scene");
+        Application.LoadLevel("Main_Scene");
     }
 
     public void Back_Title_Scene()

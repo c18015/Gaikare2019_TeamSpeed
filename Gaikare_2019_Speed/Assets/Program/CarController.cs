@@ -6,7 +6,7 @@ public class CarController : MonoBehaviour {
 
 
     public float speed = 0.4f;
-    public float MaxSpeed = 1f;
+    public float MaxSpeed = 1.8f;
 
     // Use this for initialization
     void Start () {
@@ -15,10 +15,10 @@ public class CarController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        speed = (speed + Time.deltaTime / 10) ;
+        speed = (speed + Time.deltaTime / 5) ;
         if (speed >= MaxSpeed)
         {
-            speed = 0.6f;
+            speed = 1.75f;
         }
 
 

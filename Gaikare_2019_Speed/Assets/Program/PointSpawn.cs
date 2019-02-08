@@ -8,13 +8,10 @@ public class PointSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameObject go = (GameObject)Instantiate(
-            Prefab,
-            Vector3.zero,
-            Quaternion.identity);
 
-        go.transform.SetParent(transform, false);
-	}
+        Instantiate(Prefab, transform.position, transform.rotation);
+        Invoke("Desobject", 3f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,5 +27,9 @@ public class PointSpawn : MonoBehaviour {
 
         if (Prefab != null)
             Gizmos.DrawIcon(transform.position + offset, Prefab.name, true);
+    }
+    void Desobject()
+    {
+        Destroy(this.gameObject);
     }
 }
