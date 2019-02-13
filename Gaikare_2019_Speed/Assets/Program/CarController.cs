@@ -7,6 +7,7 @@ public class CarController : MonoBehaviour {
 
     public float speed = 0.4f;
     public float MaxSpeed = 1.8f;
+    public AudioClip ATsound;
 
     // Use this for initialization
     void Start () {
@@ -44,7 +45,7 @@ public class CarController : MonoBehaviour {
             h = -0.3f;
         }
 
-
+    
         transform.Translate(-h / 1.5f, 0, -v * speed );
         this.transform.Rotate(0f, h * 3f, 0f);
 
@@ -53,6 +54,8 @@ public class CarController : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
+        
+
 
         if (collision.gameObject.tag == "Baria")
         {
@@ -66,6 +69,11 @@ public class CarController : MonoBehaviour {
 
             Application.LoadLevel("GameOver");
 
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            AudioSource.PlayClipAtPoint(ATsound, transform.position);
         }
     }
 }

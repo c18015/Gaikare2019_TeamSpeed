@@ -4,13 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-
   - RotaCurves
   - Baria
   - L_Wall
   - R_Wall
   - Baria2
-
+  - Item
+  - Enemy
   layers:
   - Default
   - TransparentFX

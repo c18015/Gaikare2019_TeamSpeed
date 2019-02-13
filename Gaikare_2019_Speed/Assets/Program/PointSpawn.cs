@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PointSpawn : MonoBehaviour {
 
-    public GameObject Prefab;
+    public GameObject[] EnemyS;
+    public int number = 0;
+    public float FirstSpawnTime = 0.1f;
+    
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
-        Instantiate(Prefab, transform.position, transform.rotation);
+        Invoke("SpawnEnemy", FirstSpawnTime);
         Invoke("Desobject", 3f);
     }
 	
@@ -25,11 +28,18 @@ public class PointSpawn : MonoBehaviour {
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawSphere(transform.position + offset, 1f);
 
-        if (Prefab != null)
-            Gizmos.DrawIcon(transform.position + offset, Prefab.name, true);
+        
     }
+
+    void SpawnEnemy()
+    {
+        number = Random.Range(0, EnemyS.Length);
+        Instantiate(EnemyS[number], transform.position, transform.rotation);
+    }
+
     void Desobject()
     {
         Destroy(this.gameObject);
     }
+
 }
