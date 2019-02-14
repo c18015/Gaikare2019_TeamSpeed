@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class IceMeterController : MonoBehaviour
 {
@@ -28,15 +29,19 @@ public class IceMeterController : MonoBehaviour
             Image.SetActive(false);
 
         }
-        if (time > 20)
+        if (time > 15)
         {
             Image2.SetActive(false);
 
         }
-        if (time > 30)
+        if (time > 20)
         {
             Image3.SetActive(false);
 
+        }
+        if (time > 20.01f)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -44,16 +49,16 @@ public class IceMeterController : MonoBehaviour
     {
         if (hit.CompareTag("Item"))
         {
-            if (time < 20)
+            if (time < 15)
             {
                 Image.SetActive(true);
             }
-            if (time < 30)
+            if (time < 20)
             {
                 Image2.SetActive(true);
             }
 
-            time = time - 10;
+            time = time - 5;
 
         }
     }
