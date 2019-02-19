@@ -18,6 +18,6 @@ public class ArrowConCon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float y = MoveRange * Mathf.Sin(Time.time * Speed);
-        transform.localPosition = StatePos + new Vector3(0, y, 0);
+        transform.localPosition = StatePos + new Vector3(y, 0, 0);
 	}
 }

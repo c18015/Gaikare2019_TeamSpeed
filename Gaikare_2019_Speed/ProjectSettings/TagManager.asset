@@ -11,6 +11,7 @@ TagManager:
   - Baria2
   - Item
   - Enemy
+  - Ice
   layers:
   - Default
   - TransparentFX

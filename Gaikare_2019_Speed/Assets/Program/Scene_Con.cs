@@ -3,14 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Scene_Con : MonoBehaviour {
+    public GameObject StageSelectGUI;
 
-
-    public void Go_Main_Scene()
-    {
-        //Application.LoadLevel("Debug_Scene");
-        Application.LoadLevel("Main_Scene");
+    public void SelectGUIon ()
+    { 
+        StageSelectGUI.SetActive(true);
     }
 
+    public void SelectGUIoff()
+    {
+        StageSelectGUI.SetActive(false);
+    }
+
+    public void Go_Stage1()
+    {
+        //Application.LoadLevel("Debug_Scene");
+        Application.LoadLevel("Stage1_Easy");
+    }
+    public void Go_Stage2()
+    {
+        //Application.LoadLevel("Debug_Scene");
+        Application.LoadLevel("Stage2_Normal");
+    }
+
+    public void Go_Stage3()
+    {
+        //Application.LoadLevel("Debug_Scene");
+        Application.LoadLevel("Stage3_Hard");
+    }
     public void Back_Title_Scene()
     {
         Application.LoadLevel("Title");

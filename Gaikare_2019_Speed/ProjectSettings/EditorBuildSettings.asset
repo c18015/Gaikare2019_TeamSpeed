@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 9361f550d68540b418a3d817db753390
   - enabled: 1
-    path: Assets/Scenes/Main_Scene.unity
+    path: Assets/Scenes/Stage1_Easy.unity
+    guid: f75c73d1b92f46946a540510e8df49cf
+  - enabled: 1
+    path: Assets/Scenes/Stage2_Normal.unity
     guid: ac73da14af20aa546aca5c0080490e9d
+  - enabled: 1
+    path: Assets/Scenes/Stage3_Hard.unity
+    guid: b3fb5093b6a6c89438a192d90f88ae39
   - enabled: 1
     path: Assets/Scenes/Clear.unity
     guid: fe1687f2da0460444b12bbb66d000aec
@@ -20,13 +26,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Debug_Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/GameClear(3stars).unity
-    guid: 573f3b6841d65994c8c67387742a4ce0
-  - enabled: 1
-    path: Assets/Scenes/GameClear(2stars).unity
-    guid: 6ececf6b798096341a07d498246d7130
-  - enabled: 1
-    path: Assets/Scenes/GameClear(1star).unity
-    guid: c98e5607a8d3b7943a66b609cdd70c03
   m_configObjects: {}
