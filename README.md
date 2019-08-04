@@ -8,7 +8,7 @@
 
 
 ## ゲームタイトル
-#Sweet carrier
+Sweet carrier
 
 
 ## ガイカレフェア
