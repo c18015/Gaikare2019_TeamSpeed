@@ -20,7 +20,7 @@ public class CarController : MonoBehaviour {
         float T2 = 0 + Time.deltaTime;
         ClearTime = ClearTime + T2;
 
-        speed = (speed + Time.deltaTime / 5) ;
+        speed = (speed + Time.deltaTime / 30) ;
         if (speed >= MaxSpeed)
         {
             speed = 1.75f;
@@ -28,13 +28,13 @@ public class CarController : MonoBehaviour {
 
 
         Rigidbody rigidbody = GetComponent<Rigidbody>();
-        //float h = Input.GetAxis("Horizontal");
+        float h = Input.GetAxis("Horizontal");
         float v = 1;
 
         //Debug.Log(speed);
         
         
-        float h = Input.acceleration.x;
+        //float h = Input.acceleration.x;
         //float v = Input.acceleration.y;
 
 

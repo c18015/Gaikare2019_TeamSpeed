@@ -21,7 +21,8 @@ public class Gyiro_Test: MonoBehaviour {
             //float x = Input.GetAxis("Horizontal");
             float y = -1;
 
-            float x = Input.acceleration. x;
+        float x = Input.GetAxis("Horizontal");
+        //float x = Input.acceleration. x;
         
 
 
